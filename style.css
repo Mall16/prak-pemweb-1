@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+header {
+    color: #fff;
+    padding: 0px;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.container{
+    background-color: #fff;
+    width: 95%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.logo{
+    margin-top: 20px;
+    display: inline-block;
+}
+.logo h1{
+    margin-left: 10px;
+    display: inline;
+    color: #000;
+}
+.logo img{
+    display: inline; 
+}
+.login{
+    padding: 10px 25px;
+    background-color: aqua;
+    border-radius: 50px;
+}
+nav {
+    float: right;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    display: inline;
+    margin-top: -50px;
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.content{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.content div{
+    padding-top: 100px;
+    margin-left: 30px;
+}
+.content h1{
+    font-size: 60px;
+    padding-top : 0px;
+    margin: 0px;
+    display: inline;
+}
+.content p{
+    width: 600px;
+    font-size: 30px;
+    margin: 0px;
+}
+.content img{
+    background-color: #333;
+    width: 50%;
+}
+.tengah{
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    margin: 200px 0px 0px;
+}
+.lihat{
+    background-color: #4771f1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+/* corousel */
+.carousel-item img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    border-radius: 20px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.carousel-item h3,
+.carousel-item p,
+.carousel-item button {
+    text-align: center;
+    margin: 10px;
+}
+.carousel-item button{
+    background-color: #00fe66;
+    border: none;
+    padding: 10px;
+}
+button{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.carousel-item button:hover{
+    background-color: #6affa6;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 1;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
+footer {
+    margin-top: 30px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* button mennu */
+#menu-btn{
+    position: relative;
+    display: block;
+    height: 20px;
+    cursor: pointer;
+}
+#menu-btn,#btn{
+    display: none;
+}
+#garis,#menu-btn:after,#menu-btn:before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color:#000;
+}
+#menu-btn:after,#menu-btn:before{
+    content: "";
+}
+#menu-btn:before{
+    border-radius: 10px;
+    top: 0px;
+}
+#menu-btn:after{
+    border-radius: 10px;
+    top: 8px;
+}
+#garis{
+    border-radius: 10px;
+    top: 16px;
+}
+.hape{
+    display: none;
+}
+@media(max-width:1020px){
+    .container{
+        padding-bottom: 20px;
+    }
+    .logo img{
+        width: 10%;
+        display: inline; 
+    }
+    .content{
+        padding-top: 100px;
+        display: block;
+        text-align: center;
+    }
+    .content div{
+        padding-top: 10px;
+        margin-left: 0;
+    }
+    .content h1{
+        font-size: 60px;
+        padding-top : 0px;
+        margin: 0px;
+        display: inline;
+    }
+    .content p{
+        width: 80%;
+        font-size: 30px;
+        margin: 0px auto;
+    }
+    .content img{
+        width: 80%;
+        background-color: #333;
+    }
+    .navi {
+        margin: 0px;
+        display: none;
+        background-color: #000;
+    }
+    #menu-btn{
+        float: right;
+        display: block;
+        width: 30px;
+        margin-top: -25px;
+        right: 15px;
+    }
+    #btn:checked ~ .navi {
+        display: block;
+        width: 100%;
+    }
+    #hape a{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        margin-top: 20px;
+        display: block;
+    }
+}
